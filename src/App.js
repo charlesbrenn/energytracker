@@ -26,11 +26,11 @@ function App() {
     <Router>
       <div className="App">
         <nav>
-          <img src="/logo.png" alt="Energy Tracker Logo" className="logo" />
+          <img src="/logo.png" alt="Logo du Suivi de Consommation" className="logo" />
           <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/about">About</Link></li>
-            <li><Link to="/energy">Energy Tracker</Link></li>
+            <li><Link to="/">Accueil</Link></li>
+            <li><Link to="/about">À Propos</Link></li>
+            <li><Link to="/energy">Suivi de Consommation</Link></li>
           </ul>
         </nav>
         <Routes>
@@ -38,10 +38,10 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/energy" element={
             <>
-              <h1>Energy Tracker</h1>
+              <h1>Suivi de Consommation</h1>
               <form onSubmit={handleSubmit}>
                 <label>
-                  Date:
+                  Date :
                   <input 
                     type="date" 
                     value={newDate} 
@@ -49,7 +49,7 @@ function App() {
                   />
                 </label>
                 <label>
-                  Consumption (kWh):
+                  Consommation (kWh) :
                   <input 
                     type="number" 
                     step="0.01" 
@@ -57,7 +57,7 @@ function App() {
                     onChange={(e) => setNewConsumption(e.target.value)} 
                   />
                 </label>
-                <button type="submit">Add Data</button>
+                <button type="submit">Ajouter Données</button>
               </form>
               <EnergyChart data={data} />
               <EnergyTips data={data} />

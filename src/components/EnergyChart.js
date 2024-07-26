@@ -1,19 +1,19 @@
 import React from 'react';
 import { Line } from 'react-chartjs-2';
-import { Chart, registerables } from 'chart.js';
+import { Chart as ChartJS, CategoryScale, LinearScale, LineElement, PointElement, Title, Tooltip, Legend } from 'chart.js';
 
-Chart.register(...registerables);
+ChartJS.register(CategoryScale, LinearScale, LineElement, PointElement, Title, Tooltip, Legend);
 
 const EnergyChart = ({ data }) => {
   const chartData = {
     labels: data.map(entry => entry.date),
     datasets: [
       {
-        label: 'Energy Consumption (kWh)',
+        label: 'Consommation d\'énergie (kWh)',
         data: data.map(entry => entry.consumption),
-        fill: false,
-        backgroundColor: 'rgba(75,192,192,1)',
-        borderColor: 'rgba(75,192,192,1)',
+        borderColor: 'rgba(0, 166, 84, 0.8)',
+        backgroundColor: 'rgba(0, 166, 84, 0.2)',
+        borderWidth: 2,
       },
     ],
   };
