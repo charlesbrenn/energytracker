@@ -1,8 +1,9 @@
+/* Global Styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  background-color: #f5f5f5; /* Couleur de fond */
 }
 
 .App {
@@ -10,21 +11,36 @@ body {
   padding: 20px;
 }
 
-.chart-container {
-  width: 80%;
-  margin: auto;
+/* Navigation Styles */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  background-color: #003e50; /* Bleu foncé */
+  color: white;
 }
 
-.tips-container {
-  background-color: #e0f7fa;
-  padding: 20px;
-  margin: 20px auto;
-  width: 50%;
-  border-radius: 5px;
+nav ul li {
+  display: inline;
+  margin-right: 15px;
 }
 
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Form Styles */
 form {
   margin: 20px 0;
+  background-color: #ffffff; /* Fond du formulaire */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 form label {
@@ -34,8 +50,35 @@ form label {
 
 form input {
   margin-left: 10px;
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
 }
 
 button {
-  margin-top: 10px;
+  background-color: #00a859; /* Vert */
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #008a3e; /* Vert plus foncé */
+}
+
+/* Chart Container */
+.chart-container {
+  width: 80%;
+  margin: auto;
+}
+
+/* Tips Container */
+.tips-container {
+  background-color: #e0f7fa; /* Couleur de fond des conseils */
+  padding: 20px;
+  margin: 20px auto;
+  width: 50%;
+  border-radius: 5px;
 }

@@ -26,6 +26,7 @@ function App() {
     <Router>
       <div className="App">
         <nav>
+          <img src="/logo.png" alt="Energy Tracker Logo" className="logo" />
           <ul>
             <li><Link to="/">Home</Link></li>
             <li><Link to="/about">About</Link></li>
